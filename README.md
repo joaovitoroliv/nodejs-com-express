@@ -3,7 +3,7 @@ Documentação do progresso do curso da plataforma Alura realizado por João Vit
 ## Sumário:
 ### Aplicações Web com Node.js
 - [HTTP: Entendendo a web por baixo dos panos](https://github.com/joaovitoroliv/http-entendendo-a-web-por-debaixo-dos-panos)
-- [Node.JS: Descomplicando o trabalho com diferentes versões](#o-que-é-o-http)
+- [Node.JS: Descomplicando o trabalho com diferentes versões](https://github.com/joaovitoroliv/nodejs-com-express/blob/main/artigo_1/README.md)
 - [NodeJS: criando sua biblioteca](#)
 - [Debugando projetos NodeJS no VSCode](#)
 - [Utilizando export.modules no Node.js](#)

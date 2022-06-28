@@ -1,4 +1,3 @@
-# Formação Node.js com Express
 ## Node.js: Descomplicando o trabalho com diferentes versões - [Artigo](https://www.alura.com.br/artigos/descomplicando-o-trabalho-com-node)
 
 - Para conflito de versões é recomendado usar Node Version Manager (NVM):
