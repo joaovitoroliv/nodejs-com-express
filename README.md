@@ -20,9 +20,3 @@ Documentação do progresso do curso da plataforma Alura realizado por João Vit
 - [Node.js: Refresh Tokens e confirmação de cadastro](#)
 - [NodeJS: controle de acesso e autorização com RBAC](#)
 [Node.js: tornando sua aplicação ainda mais segura com pouco esforço](#)
-
-
-## O que é o HTTP?
-- Protocolo HTTP são Regras de Comunicação entre Cliente e Servidor
-- Documentação: https://tools.ietf.org/html/rfc2616
-
