@@ -15,24 +15,24 @@
 - Type: module no package.json para importar a biblioteca `chalk`
 - Introdução ao CommonJS ou CJS: trata da importação e exportação de módulos/pedaços de código
   - Para exportar apenas uma função:
-````
+````javascript
 module.exports = function soma(num1, num2) {
  return num1 + num2;
 };
 ````
   - ou
-````
+````javascript
 function soma(num1, num2) {
  return num1 + num2;
 }
 module.exports = soma;
 ````
   - Para exportar um objeto com funções:
-````
+````javascript
 module.exports { multiplica, soma };
 ````
   - Para importar funções desestruturando o objeto
-````
+````javascript
 const { multiplica, soma } = require('./caminho/arquivo');
 
 const resultadoMult = multiplica(2, 2);
@@ -105,3 +105,4 @@ console.log(pegaArquivo(caminho[2]));
   - `npm install --save-dev jest`
     - `--save-dev` é para salvar como dev-dependencies, pois é utilizado somente em etapa de desenvolvimento, não deve ir para a produção
 - Criar diretório `test` com o arquivo `index.test.js`
+- Muitos conflitos foram evitados utilizando o template de typescript ja configurado com JEST para ECMAScript modules.
