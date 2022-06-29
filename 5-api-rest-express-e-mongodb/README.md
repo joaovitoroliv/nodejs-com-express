@@ -73,7 +73,8 @@
         - Grafos -> Neo4j
         - Colunas amplas -> Cassandra e Hbase
 - Nesse curso iremos utilizar o [MongoDB com o Atlas](https://www.mongodb.com/pt-br/atlas) com conector [Mongoose](https://mongoosejs.com/)
-
+- Conteúdo Extra: BSON
+  - BSON torna uma varredura mais fácil para o MongoDB
 
 
   
