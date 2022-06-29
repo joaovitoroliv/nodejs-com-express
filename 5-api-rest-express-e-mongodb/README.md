@@ -37,4 +37,16 @@
   - Inicio ao arquivo app.js na pasta src
   - Inserir type: module no package.json para ECMAScript
   - `const PORT = process.env.PORT || 3000;` boa prática para o envio para produção no futuro
-  
+- Introdução sobre frameworks: quando usamos frameworks conseguimos agilizar nosso trabalho, já que nossos esforços se voltam para o desenvolvimento, em vez de nos preocuparmos tanto com detalhes de configurações e padrões de projeto.
+- Express Application Generator - cria um esqueleto para aplicações express
+  - Para instalar: `npm install express-generator -g`
+  - Para utilizar: vá até o local/pasta, rode `express olamundo`
+  - Em seguida: `cd olamundo` e `npm install`
+  - Por fim: `npm start` e ir para http://localhost:3000
+  - Podemos digitar http://localhost:3000/users e observar que já existe uma rota padrão cadastrada
+- O que aprendemos nessa aula:
+  - A instalar o Express e os benefícios de se usar um framework para o desenvolvimento de aplicações Web;
+  - Criar um servidor local usando o Express e configurando-o para escutar requisições em uma porta específica do nosso computador;
+  - Como estruturar as requisições da API, utilizando corretamente os verbos HTTP e padronizando o endpoint de acordo com o padrão REST;
+  - Devolver dados como resposta às requisições, usando o padrão JSON;
+  - Utilizar o Postman para fazer as requisições do tipo GET, POST, PUT e DELETE, cujas últimas três não conseguimos simular pelo navegador.
