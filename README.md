@@ -8,7 +8,7 @@ Documentação do progresso do curso da plataforma Alura realizado por João Vit
 - ✅ [Debugando projetos NodeJS no VSCode](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/3-debug-vscode)
 - ✅ [Utilizando export.modules no Node.js](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/4-export-modules)
 ### Avançando com APIs REST
-- ❌ [Node.js: API Rest com Express e MongoDB](#)
+- ➖ [Node.js: API Rest com Express e MongoDB](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/5-api-rest-express-e-mongodb)
 - ❌ [Express, realizando upload com multer](#)
 - ❌ [Barrels: facilitando importações de módulos](#)
 ### Acessando dados com ORM
