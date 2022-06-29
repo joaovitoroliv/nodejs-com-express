@@ -50,3 +50,30 @@
   - Como estruturar as requisições da API, utilizando corretamente os verbos HTTP e padronizando o endpoint de acordo com o padrão REST;
   - Devolver dados como resposta às requisições, usando o padrão JSON;
   - Utilizar o Postman para fazer as requisições do tipo GET, POST, PUT e DELETE, cujas últimas três não conseguimos simular pelo navegador.
+
+## Conectando com o MongoDB
+- Porque conectar com um banco de dados? Para persistir os dados, i.e, não perder os dados a cada refresh
+- Banco relacional vs NoSQL:
+  - Que tipo de banco utilizar? 
+    - Banco relacional:
+      - Utilização de tabelas com linhas e colunas
+      - Chaves primárias e estrangeiras: relacionamentos se dão através das chaves
+      - Alguns bancos relacionais: MySQL, PostgreSQL e SQL Server
+      - Palavras reservadas, exemplos:
+        - SELECT * FROM livros WHERE id > 2 (recuperar todos os livros de id maior que dois)
+        - DELETE FROM autores WHERE nome ilike '%Paulo Coelho' (exclusao na tabela de autores de nome Paulo Coelho)
+    - Bancos NoSQL:
+      - Interessante para armazenar muitos tipos de dados
+      - Dados não precisam estar divididos em tabelas
+      - Todos os dados podem estar armazenados numa mesma estrutura
+      - Uso de Objetos pra informar tudo sobre um livro por exemplo
+      - Tipos de armazenamento:
+        - Documentos -> MongoDB (coleção de documentos do tipo JSON)
+        - Chave-valor -> OracleNoSQL, InfinityDB
+        - Grafos -> Neo4j
+        - Colunas amplas -> Cassandra e Hbase
+- Nesse curso iremos utilizar o [MongoDB com o Atlas](https://www.mongodb.com/pt-br/atlas) com conector [Mongoose](https://mongoosejs.com/)
+
+
+
+  
