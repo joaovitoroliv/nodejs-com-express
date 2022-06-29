@@ -2,12 +2,12 @@
 ## Sumário
 
 - [Criando um projeto em NodeJS](#criando-um-projeto-em-nodejs)
-- [Trabalhando com o Express](#)
+- [Trabalhando com o Express](#trabalhando-com-o-express)
 - [Conectando com o MongoDB](#)
 - [Evoluindo a API](#)
 - [Aprimorar o projeto](#depurando-a-requisição-http)
 
-## Criando um projeto em NodeJS
+## Criando um projeto em NodeJS:
 - Versão do Node 16.14.0 
 - Versão do npm 8.3.1
 - Utilizaremos o Node.js juntamente com o Express e o banco de dados NoSQL MongoDB com o Mongoose para conectar ao banco de dados
@@ -30,8 +30,11 @@
   - npm outdated	Retorna a lista de dependências desatualizadas mostrando a versão mais recente
   - npm adduser	Adiciona um novo usuario no https://registry.npmjs.org para permitir a publicação de pacotes
   - npm publish	Faz a publicação do pacote no NPM
+
+## Trabalhando com o Express:
 - Utilizaremos o Express para agilizar o nosso desenvolvimento:
   - npm install express@4.17.3
   - Inicio ao arquivo app.js na pasta src
   - Inserir type: module no package.json para ECMAScript
   - `const PORT = process.env.PORT || 3000;` boa prática para o envio para produção no futuro
+  
