@@ -1,14 +1,28 @@
 {
-  "name": "1-nodejs-criando-sua-biblioteca",
+  "name": "check-links-please",
   "version": "1.0.0",
-  "description": "- Biblioteca: é um pacote de código utilizado para otimizar uma tarefa, evita a reescrita de código - Versão do Node utilizada: 14.10.1   - Uso do `nvm` para gerenciar as versões do Node - Contexto do curso: fazer um sistema para abrir vários arquivos em formato markdown e verificar se os links estão quebrados. - `npm init -y` - para iniciar um `package.json`",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest ./test",
-    "cli": "node cli.js ./arquivos/texto1.md"
+  "description": "Use this lib to check if an URL is valid",
+  "main": "./cli.js",
+  "bin": {
+    "clp": "./cli.js"
   },
-  "keywords": [],
-  "author": "",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./test",
+    "cli": "node cli.js"
+  },
+  "keywords": [
+    "links",
+    "url",
+    "check",
+    "valid"
+  ],
+  "homepage": "https://github.com/joaovitoroliv/nodejs-com-express/tree/main/1-nodejs-criando-sua-biblioteca",
+  "author": "João Vitor Oliveira Souza",
+  "bugs": {
+    "url": "https://github.com/joaovitoroliv/nodejs-com-express",
+    "email": "jvosouza@hotmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.0.1",

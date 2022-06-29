@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+// utilizado para a publicação - shebang
+
 //const pegaArquivoAsync = require('./index'); OLD
 import pegaArquivo from './capturando-links.js';
 import chalk from 'chalk';
@@ -7,9 +10,9 @@ import validaURLs from './http-validacao.js';
 const caminho = process.argv;
 console.log(caminho);
 
-async function processaTexto(caminhoDeArquivo){
+async function processaTexto(caminhoDeArquivo) {
     const resultado = await pegaArquivo(caminhoDeArquivo[2]);
-    if (caminho[3] === 'validar'){
+    if (caminho[3] === 'validar') {
         console.log(chalk.yellow('links validados'), await validaURLs(resultado));
     } else {
 

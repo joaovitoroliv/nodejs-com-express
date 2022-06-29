@@ -106,3 +106,5 @@ console.log(pegaArquivo(caminho[2]));
     - `--save-dev` é para salvar como dev-dependencies, pois é utilizado somente em etapa de desenvolvimento, não deve ir para a produção
 - Criar diretório `test` com o arquivo `index.test.js`
 - Muitos conflitos foram evitados utilizando o template de typescript ja configurado com JEST para ECMAScript modules.
+- Um teste unitário, como os que fizemos, testa pequenas partes (ou unidades) de código; normalmente a menor parte “testável” do código. É o primeiro tipo de testes que fazemos, e além de testar funcionalidades nos ajudam a pensar em casos de uso; por exemplo, o que deve acontecer no caso de input incorreto de dados, ou falha em uma resposta. Ao testarmos as possibilidades, percebemos muitas vezes o que está faltando desenvolver.
+- Além dos testes unitários, ainda existem outros tipos, como os testes de integração, que justamente integra diferentes módulos e envolve uma complexidade maior, e os testes de interface, que simulam a interface e os eventos que o usuário pode efetuar nela, como clique em um botão ou preenchimento de um input.
