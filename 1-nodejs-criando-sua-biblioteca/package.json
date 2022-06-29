@@ -1,0 +1,21 @@
+{
+  "name": "1-nodejs-criando-sua-biblioteca",
+  "version": "1.0.0",
+  "description": "- Biblioteca: é um pacote de código utilizado para otimizar uma tarefa, evita a reescrita de código - Versão do Node utilizada: 14.10.1   - Uso do `nvm` para gerenciar as versões do Node - Contexto do curso: fazer um sistema para abrir vários arquivos em formato markdown e verificar se os links estão quebrados. - `npm init -y` - para iniciar um `package.json`",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./test",
+    "cli": "node cli.js ./arquivos/texto1.md"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "node-fetch": "^3.2.6"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jest": "^28.1.2"
+  }
+}
