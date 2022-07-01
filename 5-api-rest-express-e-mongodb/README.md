@@ -5,7 +5,7 @@
 - [Trabalhando com o Express](#trabalhando-com-o-express)
 - [Conectando com o MongoDB](#conectando-com-o-mongodb)
 - [Evoluindo a API](#evoluindo-a-api)
-- [Aprimorar o projeto](#depurando-a-requisição-http)
+- [Aprimorar o projeto](#aprimorando-o-projeto)
 
 ## Criando um projeto em NodeJS:
 - Versão do Node 16.14.0 
@@ -117,3 +117,4 @@
 - .populate('autor', 'nome') -> para passar para livros apenas o atributo 'nome' contido no autor
 - Os query params, ou parâmetros de consulta, são um conjunto definido de parâmetros anexados ao final de uma URL. Os query params são aquelas extensões da URL que ficam após o '?' e ajudam a definir um conteúdo ou ações com base nos dados passados.
   - Para adicionar vários parâmetros, um '&' é adicionado entre cada um. Eles podem ser criados por qualquer variação de tipos ou comprimentos de objetos, como String, Arrays e Numbers.
+- [Collection Postman](https://www.getpostman.com/collections/a9fbc06e9a1e29e6d1e9)
