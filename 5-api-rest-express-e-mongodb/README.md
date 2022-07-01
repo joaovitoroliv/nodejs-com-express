@@ -105,4 +105,15 @@
   - Usar models para definir Schemas
   - Usar controllers para definir o processo da requisição
 - Parâmetro __v: parametro de versionamento, podemos não utilizá-lo, mas é interessante para controlar a versão dos modelos/schemas
-- Conclusão do CRUD
+- [Conclusão do CRUD](https://github.com/joaovitoroliv/nodejs-com-express/commit/6f876b3277d633bf5b8bd27a8b9be0e29876d9a0)
+
+## Aprimorando o projeto 
+- Adicionado controlador autoresController.js, modelo Autor.js e rota autoresRoutes.js (Usando como base o que foi feito para livros)
+- A ideia é associar autores e livros, como fazer?
+- O que eu quero? Quando cadastrar um livro, ao invés de colocar um nome do autor eu quero colocar o id do autor e receber todas as informações de autores
+  - Mudar 'autor: {type: String, required: true}' para 'autor: {type: mongoose.Schema.Types.ObjectId, ref:'autores', required: true}'
+  - Em livrosController:
+- Fazendo assim conseguimos passar para livros no atributo autor, um objeto! Ou seja, associamos pelo Id
+- .populate('autor', 'nome') -> para passar para livros apenas o atributo 'nome' contido no autor
+- Os query params, ou parâmetros de consulta, são um conjunto definido de parâmetros anexados ao final de uma URL. Os query params são aquelas extensões da URL que ficam após o '?' e ajudam a definir um conteúdo ou ações com base nos dados passados.
+  - Para adicionar vários parâmetros, um '&' é adicionado entre cada um. Eles podem ser criados por qualquer variação de tipos ou comprimentos de objetos, como String, Arrays e Numbers.

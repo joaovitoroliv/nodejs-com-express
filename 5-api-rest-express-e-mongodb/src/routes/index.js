@@ -1,4 +1,5 @@
 import express from 'express'
+import autores from './autoresRoutes.js'
 import livros from './livrosRoutes.js'
 
 const routes = (app) => {
@@ -10,7 +11,8 @@ const routes = (app) => {
     app.use(
         //Indicar que irei usar json e a rota de livros
         express.json(),
-        livros
+        livros,
+        autores
     )
 }
 
