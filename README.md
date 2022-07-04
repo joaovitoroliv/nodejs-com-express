@@ -22,4 +22,4 @@ Documentação do progresso do curso da plataforma Alura realizado por João Vit
 - ❌ [Node.js: tornando sua aplicação ainda mais segura com pouco esforço](#)
 
 ### Extra:
-- ➖ [SQL com MySQL: manipule e consulte dados](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/8-intro-SQL-com-MySQL)
+- ✅ [SQL com MySQL: manipule e consulte dados](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/8-intro-SQL-com-MySQL)
