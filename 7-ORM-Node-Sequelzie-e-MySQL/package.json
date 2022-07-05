@@ -2,14 +2,23 @@
   "name": "7-orm-node-sequelzie-e-mysql",
   "version": "1.0.0",
   "description": "## Sumário",
-  "main": "index.js",
+  "main": "/api/index.js",
   "scripts": {
+    "start": "nodemon ./api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18",
+    "sequelize-cli": "^6.4.1"
   }
 }
