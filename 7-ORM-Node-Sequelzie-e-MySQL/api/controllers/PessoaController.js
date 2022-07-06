@@ -51,11 +51,12 @@ class PessoaController {
         const { id } = req.params;
         const novosDados = req.body;
         try {
-            await database.Pessoas.update(novosDados,
+            await database.Pessoas.update(novosDados, {
+                where:
                 {
-                    where: { id: Number(id) }
+                    id: Number(id)
                 }
-            )
+            })
             const pessoaAtualizada = await database.Pessoas.findOne({ where: { id: Number(id) } })
             return res.status(200).json(pessoaAtualizada)
         } catch (error) {
@@ -74,6 +75,74 @@ class PessoaController {
                 }
             })
             return res.status(200).json({ mensagem: `id ${id} foi deletado` });
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
+    // Pega uma Matricula de um Estudante por ID
+    static async pegaUmaMatricula(req, res) {
+        // Precisamos pegar o ID
+        const { estudanteId, matriculaId } = req.params
+        try {
+            const umaMatricula = await database.Matriculas.findOne({
+                where:
+                {
+                    // 'Coluna id: Query Params'
+                    id: Number(matriculaId),
+                    estudante_id: Number(estudanteId)
+                }
+            })
+            return res.status(200).json(umaMatricula);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
+    // Cria uma Matricula
+    static async criarMatricula(req, res) {
+        const { estudanteId } = req.params
+        // Spread no corpo da requisicao
+        const novaMatricula = { ...req.body, estudante_id: Number(estudanteId) };
+        try {
+            const novaMatriculaCriada = await database.Matriculas.create(novaMatricula)
+            return res.status(201).send(novaMatriculaCriada)
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
+    // Atualiza Matricula
+    static async atualizarMatricula(req, res) {
+        const { estudanteId, matriculaId } = req.params;
+        const novosDados = req.body;
+        try {
+            await database.Matriculas.update(novosDados, {
+                where:
+                {
+                    id: Number(matriculaId),
+                    estudante_id: Number(estudanteId)
+                }
+            })
+            const matriculaAtualizada = await database.Matriculas.findOne({ where: { id: Number(matriculaId) } })
+            return res.status(200).json(matriculaAtualizada)
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
+    // Deletar Matricula
+    static async deletaUmaMatricula(req, res) {
+        const { estudanteId, matriculaId } = req.params
+        try {
+            await database.Matriculas.destroy({
+                where:
+                {
+                    id: Number(matriculaId),
+                    estudante_id: Number(estudanteId)
+                }
+            })
+            return res.status(200).json({ mensagem: `id ${matriculaId} foi deletado` });
         } catch (error) {
             return res.status(500).json(error.message);
         }

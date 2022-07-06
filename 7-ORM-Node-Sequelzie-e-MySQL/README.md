@@ -166,3 +166,14 @@
       - ´npx sequelize-cli db:seed:all`
   - Depois disso deu tudo certo! 200 - OK :D
 ## Controladores
+- Niveis e Turmas Controllers são iguais a PessoaController, só algumas pequenas modificações são necessárias
+- MatriculaController é um caso especial, analisar com cuidado!!
+  - Matricula só faz sentido se tiver associado a um estudante, para ver todas as matriculas de um estudante por exemplo.
+  - Não iremos criar um controlador para Matriculas, iremos fazer dentro do controlador de Pessoas
+- O que aprendemos?
+  - Adicionar novos controladores;
+  - Trabalhar com mais de um modelo no mesmo controlador;
+  - Enviar dados via parâmetros e corpo das requisições;
+  - Utilizar estes dados para encontrar informações no banco;
+  - Gerar estruturas de dados do tipo JSON com informações úteis ao usuário.
+  
