@@ -141,4 +141,28 @@
 - Fazendo Associações/Relações:
   - Passar para o Sequelize as chaves estrangeiras de cada tabela (FKs)
   - Quatro Métodos de Associação: HasOne, BelongsTo, HasMany e BelongsToMany
+    - [Doc](https://sequelize.org/docs/v6/core-concepts/assocs/)
+    - Assosiações são feitas na parte de modelos
+    - Depois de escrever as associações em modelos, é hora de adicionar as chaves estrangeiras nas tabelas no diretório `migrations`
+
+````sql
+     docente_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'Pessoas', key: 'id' }
+      },
+````
+- Rodar as migrações: `npx sequelize-cli db:migrate`
+- Popular o restante das tabelas com os seeders
+  - `npx sequelize-cli seed:generate --name demo-xxxx`
+  - Depois de escrever os seeds:
+    - `npx sequelize-cli db:seed:all`
+- Foi encontrado o erro: 'Cannot add or update a child row: a foreign key constraint fails' na hora do seed.
+  - Isso se deve pois meu db estava com o IDs 'poluidos', i.e, começando em números muito maiores do que o usual.
+  - Para isso eu restartei o banco, digitando os comandos:
+      - `npx sequelize-cli db:drop`
+      - `npx sequelize-cli db:create`
+      - `npx sequelize-cli db:migrate`
+      - ´npx sequelize-cli db:seed:all`
+  - Depois disso deu tudo certo! 200 - OK :D
 ## Controladores

@@ -50,7 +50,16 @@ module.exports = {
         role: 'docente',
         createdAt: new Date(),
         updatedAt: new Date()
-      }], {});
+      },
+      {
+        nome: 'Jaozin do Erro',
+        ativo: true,
+        email: 'deucerto@email.com',
+        role: 'docente',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ], {});
   },
 
   async down(queryInterface, Sequelize) {
