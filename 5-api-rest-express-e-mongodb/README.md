@@ -1,4 +1,4 @@
-# Node.js: API Rest com Express e MongoDB [Curso](https://cursos.alura.com.br/course/nodejs-api-rest-express-mongodb)
+# Node.js: API Rest com Express e MongoDB - [Curso](https://cursos.alura.com.br/course/nodejs-api-rest-express-mongodb)
 ## Sumário
 
 - [Criando um projeto em NodeJS](#criando-um-projeto-em-nodejs)

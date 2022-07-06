@@ -1,4 +1,4 @@
-# Node.js: ORM com NodeJS: API com Sequelize e MySQL [Curso](https://cursos.alura.com.br/course/orm-nodejs-api-sequelize-mysql)
+# Node.js: ORM com NodeJS: API com Sequelize e MySQL - [Curso](https://cursos.alura.com.br/course/orm-nodejs-api-sequelize-mysql)
 
 ## Sumário
 

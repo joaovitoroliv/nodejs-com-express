@@ -1,4 +1,4 @@
-# Node.js: ORM com NodeJS: avançando nas funcionalidades do Sequelize [Curso](https://cursos.alura.com.br/course/orm-nodejs-avancando-sequelize)
+# Node.js: ORM com NodeJS: avançando nas funcionalidades do Sequelize - [Curso](https://cursos.alura.com.br/course/orm-nodejs-avancando-sequelize)
 
 ## Sumário
 
