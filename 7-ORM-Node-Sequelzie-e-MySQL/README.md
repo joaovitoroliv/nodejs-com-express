@@ -176,4 +176,6 @@
   - Enviar dados via parâmetros e corpo das requisições;
   - Utilizar estes dados para encontrar informações no banco;
   - Gerar estruturas de dados do tipo JSON com informações úteis ao usuário.
-  
+## Conclusão
+- Postman Collection
+https://www.getpostman.com/collections/77d1d761fb21c9abc25c
