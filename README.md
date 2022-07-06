@@ -12,8 +12,8 @@ Documentação do progresso do curso da plataforma Alura realizado por João Vit
 - ✅ [Express, realizando upload com multer](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/6-express-upload-multer-e-uso-de-barrels)
 - ✅ [Barrels: facilitando importações de módulos](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/6-express-upload-multer-e-uso-de-barrels)
 ### Acessando dados com ORM
-- ➖ [ORM com NodeJS: API com Sequelize e MySQL](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/7-ORM-Node-Sequelzie-e-MySQL)
-- ❌ [ORM com NodeJS: avançando nas funcionalides do Sequelize](#)
+- ✅ [ORM com NodeJS: API com Sequelize e MySQL](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/7-ORM-Node-Sequelzie-e-MySQL)
+- ➖ [ORM com NodeJS: avançando nas funcionalides do Sequelize](#)
 - ❌ [Node.JS: Funções Assíncronas](#)
 ### Segurança em API REST
 - ❌ [Node.js e JWT: autenticação com tokens](#)
