@@ -14,7 +14,7 @@ Documentação do progresso do curso da plataforma Alura realizado por João Vit
 ### Acessando dados com ORM
 - ✅ [ORM com NodeJS: API com Sequelize e MySQL](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/7-ORM-Node-Sequelzie-e-MySQL)
 - ✅ [ORM com NodeJS: avançando nas funcionalides do Sequelize](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/9-ORM-Node-Sequelize-Avancado)
-- ➖ [Node.JS: Funções Assíncronas](#)
+- ➖ [Node.JS: Funções Assíncronas](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/10-NodeJS-Funcoes-Assincronas)
 ### Segurança em API REST
 - ❌ [Node.js e JWT: autenticação com tokens](#)
 - ❌ [Node.js: Refresh Tokens e confirmação de cadastro](#)
