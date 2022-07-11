@@ -16,9 +16,9 @@ Documentação do progresso do curso da plataforma Alura realizado por João Vit
 - ✅ [ORM com NodeJS: avançando nas funcionalides do Sequelize](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/9-ORM-Node-Sequelize-Avancado)
 - ✅ [Node.JS: Funções Assíncronas](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/10-NodeJS-Funcoes-Assincronas)
 ### Segurança em API REST
-- ❌ [Node.js e JWT: autenticação com tokens](#)
-- ❌ [Node.js: Refresh Tokens e confirmação de cadastro](#)
-- ❌ [NodeJS: controle de acesso e autorização com RBAC](#)
+- ❌ [Node.js e JWT: autenticação com tokens](#) _Esperando licença_
+- ❌ [Node.js: Refresh Tokens e confirmação de cadastro](#) _Esperando Licença_
+- ❌ [NodeJS: controle de acesso e autorização com RBAC](#) _Esperando licença_
 - ✅ [Node.js: tornando sua aplicação ainda mais segura com pouco esforço](https://github.com/joaovitoroliv/nodejs-com-express/tree/main/14-Node-Tornando-sua-aplicacao-ainda-mais-segura)
 
 ### Extra:
