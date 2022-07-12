@@ -1,13 +1,13 @@
 ## Node.js e JWT: autenticação com tokens - [Curso](https://cursos.alura.com.br/course/node-jwt-autenticacao-tokens)
 
 ## Sumário
-- [Introdução](#introdução)
-- [Protegendo as senhas no banco de dados](#protegendo-as-senhas-no-banco-de-dados)
-- [Criando um sistema de login escalável](#criando-um-sistema-de-login-escalável)
-- [Implementando Autenticação com JWT](#)
+- [Introdução](#1-introdução)
+- [Protegendo as senhas no banco de dados](#2-protegendo-as-senhas-no-banco-de-dados)
+- [Criando um sistema de login escalável](#3-criando-um-sistema-de-login-escalável)
+- [Implementando Autenticação com JWT](#4-implementando-autenticação-com-jwt)
 - [Implementando o logout com tokens](#)
 
-## Introdução
+## 1. Introdução
 - O que iremos aprender nesse curso? Olhar com mais calma para os problemas de segurança na aplicação. O que fazer quando o banco de dados é vazado? O cliente que está enviando uma requisição para o servidor, ele é quem diz que é?
 - Funções de Hashing - como usar para proteger as senhas de vazamentos
 - Sistema de autenticação sem seções - usando tokens (alta escalabilidade) 
@@ -25,7 +25,7 @@
 - Removi e Atualizei as dependencias do projeto manualmente via package.json
 - npm install e start no projeto
 
-## Protegendo as senhas no banco de dados
+## 2. Protegendo as senhas no banco de dados
 - Precisamos de uma proteção para as nossas senhas no DB:
     - Precisamos de uma função que receba a nossa senha e transforme para algo aparantemente aleatório
     - Tendo o resultado da função é possível comparar com a senha original e autenticar o usuário
@@ -61,7 +61,7 @@
     - O funcionamento da função de hashing bcrypt
     - Implementar a proteção das senhas no banco de dados usando o bcrypt
 
-## Criando um sistema de login escalável
+## 3. Criando um sistema de login escalável
 - Precisamos de um método de login para poder fazer a criação e o delete de usuários e posts
 - Diferentes métodos de login:
     - Sessões: Usuario passa Email e Senha -> Servidor envia ID_Sessao e Usuario armazena -> Toda requisicao que o usuário fizer vai ter Requisicao + ID_SESSAO
@@ -99,7 +99,7 @@
     - Como funciona o JSON Web Token;
     - Como implementar uma autenticação local sem sessões
 
-## Implementando autenticação com JWT
+## 4. Implementando autenticação com JWT
 - Até agora temos temos três rotas que queremos proteção: Adicionar Post, Efetuar Login e Deletar Usuário. Já implementamos o Efetuar Login
 - Como garantir autenticação do usuário sem que ele tenha que enviar email e senha toda hora? Por meio de Token. Quando o usuário fizer login é preciso enviar para um cliente um Token para que seja enviado a cada requisição, vamos implementar a construção desse token
 - Construção de tokens:
