@@ -5,7 +5,7 @@
 - [Protegendo as senhas no banco de dados](#2-protegendo-as-senhas-no-banco-de-dados)
 - [Criando um sistema de login escalável](#3-criando-um-sistema-de-login-escalável)
 - [Implementando Autenticação com JWT](#4-implementando-autenticação-com-jwt)
-- [Implementando o logout com tokens](#)
+- [Implementando o logout com tokens](#05---implementando-o-logout-com-tokens)
 
 ## 1. Introdução
 - O que iremos aprender nesse curso? Olhar com mais calma para os problemas de segurança na aplicação. O que fazer quando o banco de dados é vazado? O cliente que está enviando uma requisição para o servidor, ele é quem diz que é?
