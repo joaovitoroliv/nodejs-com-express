@@ -1,7 +1,8 @@
 const Usuario = require('./usuarios-modelo');
 const { InvalidArgumentError, InternalServerError } = require('../erros');
 // Para ler uma variável de ambiente no nosso programa
-
+// Importar funcoes da blacklist
+const blacklist = require('../../redis/manipula-blacklist')
 
 const jwt = require('jsonwebtoken')
 function criaTokenJWT(usuario) {
@@ -13,7 +14,7 @@ function criaTokenJWT(usuario) {
   // Gerar o token e assinar ele baseado no payload e senha-secreta
   // const token = jwt.sign(payload, 'senha-secreta')
   // senha-secreta esta dentro de um arquivo .env
-  const token = jwt.sign(payload, process.env.CHAVE_JWT)
+  const token = jwt.sign(payload, process.env.CHAVE_JWT, { expiresIn: '15m' })
   return token
 }
 
@@ -53,6 +54,19 @@ module.exports = {
     // Nesse caso, ja temos a certeza de que o usuario está autenticado
     // Status 204: "olhar cabeçalho de resposta pois podem ser uteis"
     res.status(204).send();
+  },
+
+  logout: async (req, res) => {
+    try {
+      // Usuario da o token e adicionamos na blacklist
+      // Buscar token no BearerStrategy
+      const token = req.token;
+      // Retorna uma promise, portanto async/await na funcao
+      await blacklist.adiciona(token);
+      res.status(204).send();
+    } catch (erro) {
+      res.status(500).json({ erro: erro.message })
+    }
   },
 
   lista: async (req, res) => {

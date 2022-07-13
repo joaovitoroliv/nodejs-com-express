@@ -136,3 +136,69 @@
     - Como gerar senhas aleatórias;
     - Como guardar valores em uma variável de ambiente;
     - Como tratar erros de autenticação.
+## 05 - Implementando o logout com tokens
+-  Como é feito no método com sessão:
+    - Dado que o usuário está autenticado e logado, usuário efetua requisição para logout e o servidor deleta a sessão do servidor, deste modo qualquer outra requisição que ele fizer ao servidor não irá ser aceita.
+- Tem como fazer isso com tokens?
+    - A validade de um token, por enquanto, é "infinita", caso o usuário perca o token para um atacante, o atacante poderá usar esse token por tempo indefinido pois o token será sempre válido. Portanto, devemos implementar um tempo de expiração do token para nos previnirmos disso.
+    - Onde inserir o tempo de expiração do token? `usuarios-controlador.js`
+        - `const token = jwt.sign(payload, process.env.CHAVE_JWT, { expiresIn: '15m' })`
+        - Dessa forma, usuário tem que ficar logando de 15 em 15 minutos para continuar usando a aplicação. Como contornar isso? Criando um segundo tipo de token com tempo de vida maior, para renovar os tokens de vida curto, tudo isso por baixo dos panos.
+        - Essa implementação iremos realizar mais a frente.
+        - Precisamos tratar um erro que diz respeito a expiração do token, isso é feito no arquivo `middlewares-autenticacao.js`, como demonstra abaixo:
+
+        ````javascript
+        if (erro && erro.name === 'TokenExpiredError') {
+                    return res.status(401).json({ erro: erro.message, expiradoEm: erro.expiredAt })
+                }
+        ````
+        - Para testar, alterar tempo de expiração para 1segundo (1s) - Tudo OK!
+        - [Documentação JWT](https://www.npmjs.com/package/jsonwebtoken)
+- Instalando o Redis:
+````javascript
+curl http://download.redis.io/releases/redis-3.0.6.tar.gz  -o redis-3.0.
+6.tar.gz
+tar xzf redis-3.0.6.tar.gz
+cd redis-3.0.6
+make
+````
+- Criando uma blacklist:
+    - O que queremos? Quando o usuário fizer logout, queremos quase que instantaneamente invalidar o token utilizado, para que não seja mais utilizado mesmo que dentro do prazo de expiração do token
+    - Como fazer isso? Precisamos guardar uma informação no nosso DB, por meio de uma lista de "Tokens Inválidos Por Logout".
+    - Como vai funcionar? Quando um usuário faz um logout, enviamos o token para a blacklist. Dessa forma, em toda requisição será verificado se o token está na blacklist ou não, se tiver, a gente invalida o token e rejeita a requisição.
+    - Lista infinita? Precisamos de um critério para remover esses tokens. Quando o token expirar, nós podemos remover o token da lista. Portanto, a nossa lista só irá conter os tokens que foram invalidados por logout, mas que estão ainda dentro do tempo de vida deles.
+    - Qual estrutura de dados iremos usar? Usaremos Redis pois é muito rápido.
+    - Base de dados: CHAVE - VALOR
+        - TOKEN como chave
+        - Nulo como valor
+- Implementar a Blacklist:
+    - Ter certeza que o Redis foi instalado
+    - Instalar o módulo: `npm install redis@3.0.2`
+    - Criar pasta `redis` na raiz do projeto com o arquivo `blacklist.js`
+    - Importar no `server.js`
+    - Precisamos agora criar a nossa API de interação com o Redis
+- Implementar funções para fazer a manipulação dessa lista:
+    - Criar arquivo `manipula-blacklist.js`
+    - Diminuir o tamanho do token com Hash
+- Usando a blacklist no sistema de Logout:
+    - Implementar o logout em `usuarios-controlador.js`
+    - Buscar Token em BearerStrategy em `estrategias-autenticacao.js` 
+    - Enviar Token do Bearer para o Middleware de Autenticacao:
+    ````javascript
+    try {
+                // Valida o token que recebemos do cliente juntamente com a chave secreta e recuperar o payload
+                const payload = jwt.verify(token, process.env.CHAVE_JWT);
+                const usuario = await Usuario.buscaPorId(payload.id);
+                done(null, usuario, { token: token });
+    ````
+    - Modificar`bearer` em `estrategias-autenticacao.js`:
+        - `req.token = info.token;`
+    - Por fim, adiciona rota de logout em `usuarios-rotas.js`
+    - Implementar verificação se o usuario fez logout e barrar as requisições futuras - `estrategias-autenticacao.js` -> função `verificaTokenNaBlacklist`
+- O que aprendemos?
+    - Como criar tokens com tempo de expiração;
+    - Como invalidar JSON Web Tokens com uma blacklist;
+    - Como usar o Redis no Node para criar uma blacklist;
+    - Como usar os métodos do Redis no Node;
+    - Implementar um sistema de logout com tokens.
+- [Collection Postman](https://www.getpostman.com/collections/cad009b82a2c88c614e5)
