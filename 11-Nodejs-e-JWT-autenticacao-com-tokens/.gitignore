@@ -2,3 +2,5 @@ node_modules
 .vscode
 db.sqlite
 .env
+redis
+redis-3.0.6
